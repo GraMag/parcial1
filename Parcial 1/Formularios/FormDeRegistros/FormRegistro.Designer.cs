@@ -176,7 +176,7 @@ namespace Formularios
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRegistro";

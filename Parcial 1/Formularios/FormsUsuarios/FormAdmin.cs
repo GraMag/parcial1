@@ -50,5 +50,11 @@ namespace Formularios
                 formRegEmp.ShowDialog();
             }
         }
+
+        private void btnFacturacion_Click(object sender, EventArgs e)
+        {
+            FormFactura formFactura = new FormFactura();
+            formFactura.Show();
+        }
     }
 }

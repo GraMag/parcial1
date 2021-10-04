@@ -29,34 +29,23 @@ namespace Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblOriginal = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFactura));
             this.SuspendLayout();
-            // 
-            // lblOriginal
-            // 
-            this.lblOriginal.AutoSize = true;
-            this.lblOriginal.Location = new System.Drawing.Point(219, 9);
-            this.lblOriginal.Name = "lblOriginal";
-            this.lblOriginal.Size = new System.Drawing.Size(62, 20);
-            this.lblOriginal.TabIndex = 0;
-            this.lblOriginal.Text = "Original";
             // 
             // FormFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(548, 704);
-            this.Controls.Add(this.lblOriginal);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(612, 386);
             this.Name = "FormFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblOriginal;
     }
 }

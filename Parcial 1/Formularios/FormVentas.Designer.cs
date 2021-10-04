@@ -78,6 +78,7 @@ namespace Formularios
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
+            this.lblCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblCliente.Location = new System.Drawing.Point(134, 27);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(58, 20);
@@ -87,6 +88,7 @@ namespace Formularios
             // lblID
             // 
             this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Location = new System.Drawing.Point(21, 27);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(27, 20);
@@ -96,6 +98,7 @@ namespace Formularios
             // lblIdProducto
             // 
             this.lblIdProducto.AutoSize = true;
+            this.lblIdProducto.BackColor = System.Drawing.Color.Transparent;
             this.lblIdProducto.Location = new System.Drawing.Point(21, 65);
             this.lblIdProducto.Name = "lblIdProducto";
             this.lblIdProducto.Size = new System.Drawing.Size(91, 20);
@@ -122,6 +125,7 @@ namespace Formularios
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Location = new System.Drawing.Point(21, 366);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(45, 20);
@@ -161,6 +165,7 @@ namespace Formularios
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(21, 417);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
@@ -184,6 +189,7 @@ namespace Formularios
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(21, 489);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
@@ -193,6 +199,7 @@ namespace Formularios
             // lblCuotasOVuelto
             // 
             this.lblCuotasOVuelto.AutoSize = true;
+            this.lblCuotasOVuelto.BackColor = System.Drawing.Color.Transparent;
             this.lblCuotasOVuelto.Location = new System.Drawing.Point(21, 457);
             this.lblCuotasOVuelto.Name = "lblCuotasOVuelto";
             this.lblCuotasOVuelto.Size = new System.Drawing.Size(57, 20);
@@ -236,6 +243,7 @@ namespace Formularios
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
+            this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
             this.lblCantidad.Location = new System.Drawing.Point(21, 102);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(72, 20);
@@ -245,6 +253,7 @@ namespace Formularios
             // lblTotalCuotas
             // 
             this.lblTotalCuotas.AutoSize = true;
+            this.lblTotalCuotas.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCuotas.Location = new System.Drawing.Point(208, 366);
             this.lblTotalCuotas.Name = "lblTotalCuotas";
             this.lblTotalCuotas.Size = new System.Drawing.Size(45, 20);
@@ -255,6 +264,7 @@ namespace Formularios
             // lblCuota
             // 
             this.lblCuota.AutoSize = true;
+            this.lblCuota.BackColor = System.Drawing.Color.Transparent;
             this.lblCuota.Location = new System.Drawing.Point(202, 391);
             this.lblCuota.Name = "lblCuota";
             this.lblCuota.Size = new System.Drawing.Size(51, 20);
@@ -266,6 +276,8 @@ namespace Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 549);
             this.Controls.Add(this.lblCuota);
             this.Controls.Add(this.lblTotalCuotas);

@@ -54,6 +54,7 @@ namespace Formularios
             this.btnFacturacion.TabIndex = 12;
             this.btnFacturacion.Text = "Facturacion";
             this.btnFacturacion.UseVisualStyleBackColor = false;
+            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
             // 
             // FormAdmin
             // 
