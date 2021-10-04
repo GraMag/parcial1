@@ -29,8 +29,10 @@ namespace Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleado));
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.lblDatos = new System.Windows.Forms.Label();
             this.btnClientes = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
@@ -43,6 +45,7 @@ namespace Formularios
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblBienvenido.Location = new System.Drawing.Point(17, 12);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(102, 20);
@@ -51,6 +54,7 @@ namespace Formularios
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.lblDatos);
             this.panel1.Controls.Add(this.lblBienvenido);
             this.panel1.Location = new System.Drawing.Point(22, 23);
@@ -58,9 +62,21 @@ namespace Formularios
             this.panel1.Size = new System.Drawing.Size(943, 90);
             this.panel1.TabIndex = 1;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnLogOut.Location = new System.Drawing.Point(863, 3);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(77, 29);
+            this.btnLogOut.TabIndex = 2;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
+            this.lblDatos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDatos.Location = new System.Drawing.Point(342, 12);
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(401, 20);
@@ -69,12 +85,13 @@ namespace Formularios
             // 
             // btnClientes
             // 
+            this.btnClientes.BackColor = System.Drawing.Color.GreenYellow;
             this.btnClientes.Location = new System.Drawing.Point(22, 225);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(322, 59);
             this.btnClientes.TabIndex = 4;
             this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // dataGridView
@@ -91,22 +108,24 @@ namespace Formularios
             // 
             // btnProductos
             // 
+            this.btnProductos.BackColor = System.Drawing.Color.GreenYellow;
             this.btnProductos.Location = new System.Drawing.Point(22, 160);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(322, 59);
             this.btnProductos.TabIndex = 10;
             this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnNuevoCliente
             // 
+            this.btnNuevoCliente.BackColor = System.Drawing.Color.GreenYellow;
             this.btnNuevoCliente.Location = new System.Drawing.Point(22, 225);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(322, 59);
             this.btnNuevoCliente.TabIndex = 11;
             this.btnNuevoCliente.Text = "Nuevo Cliente";
-            this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.UseVisualStyleBackColor = false;
             this.btnNuevoCliente.Visible = false;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
@@ -114,6 +133,7 @@ namespace Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkOrange;
             this.ClientSize = new System.Drawing.Size(993, 494);
             this.Controls.Add(this.btnNuevoCliente);
@@ -121,6 +141,7 @@ namespace Formularios
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The Pet Store";
@@ -140,5 +161,6 @@ namespace Formularios
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnNuevoCliente;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

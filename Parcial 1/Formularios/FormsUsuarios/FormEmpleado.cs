@@ -84,8 +84,19 @@ namespace Formularios
 
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
+            dataGridView.DataSource = null;
             FormRegistro formRegistro = new FormRegistro(petshop);
             formRegistro.ShowDialog();
+            dataGridView.DataSource = petshop.Clientes;
+            this.dataGridView.Columns["Password"].Visible = false;
+            btnNuevoCliente.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            this.Hide();
+            formLogin.ShowDialog();
         }
     }
 }

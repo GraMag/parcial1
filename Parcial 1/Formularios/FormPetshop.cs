@@ -19,10 +19,9 @@ namespace Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormLogin newMDIChild = new FormLogin();
-            newMDIChild.MdiParent = this;
-            button1.Hide();
-            newMDIChild.Show();
+            FormLogin formLogin = new FormLogin();
+            btnIngresar.Hide();
+            formLogin.Show();
         }
     }
 }

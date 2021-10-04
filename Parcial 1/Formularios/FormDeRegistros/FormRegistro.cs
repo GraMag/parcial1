@@ -32,10 +32,10 @@ namespace Formularios
             if(result == DialogResult.Yes)
             {
                 Cliente cliente = new Cliente(txtBoxNombre.Text, txtBoxApellido.Text, txtBoxMail.Text, txtBoxDNI.Text, dateTimePicker1.Value);
+                petshop.Clientes.Add(cliente);
                 FormVentas formVentas = new FormVentas(petshop, cliente);
-
-                formVentas.Show();
-                this.Close();
+                this.Hide();
+                formVentas.ShowDialog();
             }           
         }
     }
