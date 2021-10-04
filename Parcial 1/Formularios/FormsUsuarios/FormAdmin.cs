@@ -23,10 +23,10 @@ namespace Formularios
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
+            DataGridViewProp.DataSource = null;
             DataGridViewProp.DataSource = Petshop.Empleados;
-            DataGridViewProp.Columns["Password"].Visible = false;
-            DataGridViewProp.Enabled = true;
             SetearColumnas();
+            DataGridViewProp.Enabled = true;
         }
 
         private void SetearColumnas()
@@ -37,6 +37,18 @@ namespace Formularios
             DataGridViewProp.Columns["EMAIL"].DisplayIndex = 3;
             DataGridViewProp.Columns["CARGO"].DisplayIndex = 4;
             DataGridViewProp.Columns["Password"].Visible = false;
+        }
+
+        protected override void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int.TryParse(DataGridViewProp.Rows[e.RowIndex].Cells[0].Value.ToString(), out int id);
+
+            Empleado empleado = Petshop.Empleados.Find(emp => emp.Id == id);
+            if (empleado != null)
+            {
+                FormRegEmp formRegEmp = new FormRegEmp(empleado);
+                formRegEmp.ShowDialog();
+            }
         }
     }
 }

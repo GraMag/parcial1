@@ -29,6 +29,7 @@ namespace Formularios.FormDeRegistros
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegEmp));
             this.lblCargo = new System.Windows.Forms.Label();
             this.comboCargo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -36,6 +37,7 @@ namespace Formularios.FormDeRegistros
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
+            this.lblCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblCargo.Location = new System.Drawing.Point(25, 259);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(52, 20);
@@ -54,6 +56,8 @@ namespace Formularios.FormDeRegistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Tile;
             this.ClientSize = new System.Drawing.Size(344, 551);
             this.Controls.Add(this.comboCargo);
             this.Controls.Add(this.lblCargo);

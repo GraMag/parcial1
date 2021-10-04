@@ -36,7 +36,7 @@ namespace Formularios
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(12, 507);
+            this.btnIngresar.Location = new System.Drawing.Point(741, 52);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(94, 29);
             this.btnIngresar.TabIndex = 1;
@@ -50,7 +50,7 @@ namespace Formularios
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(267, 426);
+            this.label1.Location = new System.Drawing.Point(250, 406);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(556, 129);
             this.label1.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace Formularios
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1049, 548);
+            this.ClientSize = new System.Drawing.Size(1033, 524);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIngresar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

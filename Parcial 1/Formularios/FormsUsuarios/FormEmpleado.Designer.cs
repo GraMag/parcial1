@@ -35,9 +35,9 @@ namespace Formularios
             this.btnLogOut = new System.Windows.Forms.Button();
             this.lblDatos = new System.Windows.Forms.Label();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnNuevoCliente = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -94,18 +94,6 @@ namespace Formularios
             this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // dataGridView
-            // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView.Location = new System.Drawing.Point(364, 160);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 29;
-            this.dataGridView.Size = new System.Drawing.Size(600, 313);
-            this.dataGridView.TabIndex = 9;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
             // btnProductos
             // 
             this.btnProductos.BackColor = System.Drawing.Color.GreenYellow;
@@ -129,6 +117,18 @@ namespace Formularios
             this.btnNuevoCliente.Visible = false;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView.Location = new System.Drawing.Point(364, 160);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 29;
+            this.dataGridView.Size = new System.Drawing.Size(600, 313);
+            this.dataGridView.TabIndex = 9;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            // 
             // FormEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -141,6 +141,7 @@ namespace Formularios
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -158,9 +159,9 @@ namespace Formularios
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDatos;
         private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnNuevoCliente;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

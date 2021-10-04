@@ -21,5 +21,18 @@ namespace Formularios.FormDeRegistros
             comboCargo.DataSource = Enum.GetValues(typeof(ECargo));
             
         }
+
+        public FormRegEmp(Empleado empleado)
+            :this()
+        {
+            this.empleado = empleado;
+            TxtNombre = empleado.Nombre;
+            TxtApellido = empleado.Apellido;
+            TxtMail.Text = empleado.Email;
+            TxtMail.Enabled = false;
+            comboCargo.Text = empleado.Cargo.ToString();
+        }
+
+  
     }
 }

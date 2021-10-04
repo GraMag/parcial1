@@ -100,6 +100,7 @@ namespace Formularios
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtBxPassword);
             this.Controls.Add(this.txtBxUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";

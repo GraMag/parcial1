@@ -70,7 +70,7 @@ namespace Formularios
             dataGridView.DataSource = petshop.Productos;
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        protected virtual void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int.TryParse(dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString(), out int id);
 

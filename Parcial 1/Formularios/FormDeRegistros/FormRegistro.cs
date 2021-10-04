@@ -25,18 +25,63 @@ namespace Formularios
             this.petshop = petshop;
         }
 
+        public string TxtNombre
+        {
+            set
+            {
+                txtBoxNombre.Text = value;
+            }
+        }
+
+        public string TxtApellido
+        {
+            set
+            {
+                txtBoxApellido.Text = value;
+            }
+        }
+
+        public TextBox TxtMail
+        {
+            get
+            {
+                return txtBoxMail;
+            }
+            set
+            {
+                txtBoxMail = value;
+            }
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            DialogResult result = MessageBox.Show("Confirmar datos", "Nuevo Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(result == DialogResult.Yes)
+
+            if ((string.IsNullOrWhiteSpace(txtBoxNombre.Text) && string.IsNullOrWhiteSpace(txtBoxNombre.Text)))
             {
-                Cliente cliente = new Cliente(txtBoxNombre.Text, txtBoxApellido.Text, txtBoxMail.Text, txtBoxDNI.Text, dateTimePicker1.Value);
-                petshop.Clientes.Add(cliente);
-                FormVentas formVentas = new FormVentas(petshop, cliente);
-                this.Hide();
-                formVentas.ShowDialog();
-            }           
+                MessageBox.Show("Debe tener nombre y apellido.", "Esta persona es un NN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Confirmar datos", "Nuevo Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Cliente cliente = new Cliente(txtBoxNombre.Text, txtBoxApellido.Text, txtBoxMail.Text, txtBoxDNI.Text, dateTimePicker1.Value);
+                    petshop.Clientes.Add(cliente);
+                    FormVentas formVentas = new FormVentas(petshop, cliente);
+                    this.Hide();
+                    formVentas.ShowDialog();
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Los cambios no se guardaran. Esta seguro?", "Cancelar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }

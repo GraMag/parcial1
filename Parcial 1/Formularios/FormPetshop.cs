@@ -21,7 +21,8 @@ namespace Formularios
         {
             FormLogin formLogin = new FormLogin();
             btnIngresar.Hide();
-            formLogin.Show();
+            formLogin.ShowDialog();
         }
+
     }
 }
