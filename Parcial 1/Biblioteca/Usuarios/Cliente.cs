@@ -10,6 +10,7 @@ namespace Biblioteca
     {
         static int ultimoId;
 
+
         static Cliente()
         {
             ultimoId = 0;

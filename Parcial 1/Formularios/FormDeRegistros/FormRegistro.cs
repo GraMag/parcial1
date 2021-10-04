@@ -53,6 +53,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Aceptar usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
@@ -75,6 +80,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Cancelar operacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Los cambios no se guardaran. Esta seguro?", "Cancelar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

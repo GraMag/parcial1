@@ -39,6 +39,11 @@ namespace Formularios
             DataGridViewProp.Columns["Password"].Visible = false;
         }
 
+        /// <summary>
+        /// Al clickar una celda abre el formulario para modificar ese empleado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int.TryParse(DataGridViewProp.Rows[e.RowIndex].Cells[0].Value.ToString(), out int id);
@@ -51,6 +56,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Abre el formulario de facturacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
             FormFactura formFactura = new FormFactura();

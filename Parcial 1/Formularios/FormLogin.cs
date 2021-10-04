@@ -24,7 +24,11 @@ namespace Formularios
             petshop.Productos = Controlador.CargarProductos();
         }
 
-
+        /// <summary>
+        /// Abre el formulario correspondiente al usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Usuario usuario = Controlador.Login(petshop.UsuariosRegistrados, txtBxUsuario.Text, txtBxPassword.Text);
@@ -47,12 +51,22 @@ namespace Formularios
                 MessageBox.Show("Blocky, nuestro perro guardian, no te reconoce.", "Usuario o contraseña invalidos", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
         }
 
+        /// <summary>
+        /// Ingreso como admin
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdminLogin_Click(object sender, EventArgs e)
         {
             this.txtBxUsuario.Text = "bugs.bunny@thepetshop.com";
             this.txtBxPassword.Text = "V13j0";
         }
 
+        /// <summary>
+        /// Ingreso como empleado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEmpLogin_Click(object sender, EventArgs e)
         {
             this.txtBxUsuario.Text = "ricky.fort@thepetshop.com";

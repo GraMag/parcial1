@@ -108,9 +108,7 @@ namespace Biblioteca
 
             sb.AppendLine($"Nombre y apellido: {nombre} {apellido}");
             sb.AppendLine($"Email: {Email}");
-          //  sb.AppendLine($"DNI: {dni}");
-          //  sb.AppendLine($"Fecha de nac: {fecNac} ({fecNac - today()}");
-
+        
             return sb.ToString();
         }
     }

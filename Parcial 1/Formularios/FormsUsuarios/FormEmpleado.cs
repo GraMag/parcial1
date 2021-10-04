@@ -57,6 +57,12 @@ namespace Formularios
                 this.dataGridView = value;
             }
         }
+
+        /// <summary>
+        /// Muestra clientras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClientes_Click(object sender, EventArgs e)
         {
             btnNuevoCliente.Visible = true;
@@ -64,12 +70,22 @@ namespace Formularios
             this.dataGridView.Columns["Password"].Visible = false;
         }
 
+        /// <summary>
+        /// Muestra productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProductos_Click(object sender, EventArgs e)
         {
             btnNuevoCliente.Visible = false;
             dataGridView.DataSource = petshop.Productos;
         }
 
+        /// <summary>
+        /// Abre el form de ventas con los datos del cliente seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected virtual void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int.TryParse(dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString(), out int id);
@@ -82,6 +98,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Abre el form para ingresar un nuevo cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = null;
@@ -92,6 +113,11 @@ namespace Formularios
             btnNuevoCliente.Hide();
         }
 
+        /// <summary>
+        /// Cierra sesion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();

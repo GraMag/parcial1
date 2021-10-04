@@ -9,39 +9,16 @@ namespace Biblioteca
 {
     public class Administrador : Empleado
     {
+        /// <summary>
+        /// Instancia un empleado
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="password"></param>
         public Administrador(string nombre, string apellido, string password)
             : base(nombre, apellido, password, ECargo.ADMIN)
         {
 
         }
-
-        public static string MostrarEmpleados(List<Empleado> empleados)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("+-+-+-+-+-+-EMPLEADOS-+-+-+-+-+-+\n");
-            foreach (Empleado empleado in empleados)
-                sb.AppendLine(MostrarEmpleado(empleado));
-
-            return sb.ToString();
-        }
-
-        public static string MostrarEmpleado(Empleado empleado)
-        {
-            return empleado.ToString();
-        }
-        /*  public Empleado ModificarEmpleado(List<Empleado> empleados, int id, Empleado empleadoModificado)
-           {
-               foreach (Empleado empleado in empleados)
-               {
-                   if(empleado.Id == id)
-                   {
-                      // empleado = empleadoModificado;
-                       break;
-                   }
-               }
-               return empleado;
-
-           }*/
     }
 }

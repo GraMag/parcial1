@@ -9,6 +9,10 @@ namespace Biblioteca
 {
     public static class Controlador
     {
+        /// <summary>
+        /// Hardcodea distintas clases de usuarios
+        /// </summary>
+        /// <returns>Devuelve una lista de usuarios</returns>
         public static List<Usuario> CargarUsuarios()
         {
             List<Usuario> usuariosRegistrados = new List<Usuario>();
@@ -21,6 +25,10 @@ namespace Biblioteca
             return usuariosRegistrados;
         }
 
+        /// <summary>
+        /// Hardcodea una lista de productos
+        /// </summary>
+        /// <returns>Devuelve una lista de productos</returns>
         public static List<Producto> CargarProductos()
         {
             List<Producto> stockProductos = new List<Producto>();
@@ -32,6 +40,10 @@ namespace Biblioteca
             return stockProductos;
         }
 
+        /// <summary>
+        /// Carga una lista de Clientes y una de Empleados
+        /// </summary>
+        /// <param name="petshop"></param>
         public static void ListarUsuarios(Petshop petshop)
         {
             foreach (Usuario user in petshop.UsuariosRegistrados)
@@ -41,6 +53,13 @@ namespace Biblioteca
                     petshop.Empleados.Add((Empleado)user);
         }
 
+        /// <summary>
+        /// Verifica que el usuario y la contraseña coincidan
+        /// </summary>
+        /// <param name="usuariosRegistrados"></param>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>Devuelve el usuario valido. Sino devuelve null</returns>
         public static Usuario Login(List<Usuario> usuariosRegistrados, string email, string password)
         {
             foreach (Usuario user in usuariosRegistrados)
@@ -50,6 +69,11 @@ namespace Biblioteca
             return null;
         }
 
+        /// <summary>
+        /// Calcula el valor de la venta
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <returns>Monto de la venta</returns>
         public static double CalcularSubtotal(List<Producto> productos)
         {
             double total = 0;
@@ -60,6 +84,12 @@ namespace Biblioteca
             return total;
         }
 
+        /// <summary>
+        /// Calcula el total con recargo en caso de pagar en cuotas
+        /// </summary>
+        /// <param name="subtotal">Valor de la compra</param>
+        /// <param name="cuotas">Cantidad de cuotas</param>
+        /// <returns>Total con recargo</returns>
         public static double CalcularTotalConCuotas(double subtotal, int cuotas)
         {
             switch (cuotas)

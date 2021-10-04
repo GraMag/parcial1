@@ -19,7 +19,7 @@ namespace Biblioteca
 
         public Producto()
         {
-            Random random = new Random();
+
         }
 
         public Producto(int id, ECategoria categoria, string nombre, double precio, string marca, int cantidad)
@@ -103,6 +103,12 @@ namespace Biblioteca
             }
         }
 
+        /// <summary>
+        /// Crea un nuevo producto a partir de los datos de otro producto, excepto la cantidad
+        /// </summary>
+        /// <param name="p1">Producto destino</param>
+        /// <param name="p2">Producto origen</param>
+        /// <returns></returns>
         public static Producto operator +(Producto p1, Producto p2)
         {
             return new Producto(p2.Id, p2.ECategoriaProp, p2.Nombre, p2.Precio, p2.Marca, 0);

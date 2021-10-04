@@ -43,7 +43,11 @@ namespace Formularios
             this.lblCliente.Text = $"Nombre y apellido {cliente.Nombre} {cliente.Apellido}";
         }
 
-
+        /// <summary>
+        /// Agrega productos a la lista de ventas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             dataGridViewVentaEnCurso.DataSource = null;
@@ -75,6 +79,11 @@ namespace Formularios
             dataGridViewVentaEnCurso.DataSource = ventaEnCurso;
         }
 
+        /// <summary>
+        /// Filtra los productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             switch (cmbBoxFiltrar.SelectedItem)
@@ -100,6 +109,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Cambia segun el medio de pago seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbBoxPago_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtBoxPago.Text = string.Empty;
@@ -122,6 +136,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Revisa que la compra sea valida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             if(double.TryParse(txtBoxPago.Text, out double pago))
@@ -164,6 +183,15 @@ namespace Formularios
         }
 
 
+        /// <summary>
+        /// Confirma la venta
+        /// </summary>
+        /// <param name="petshop"></param>
+        /// <param name="cliente"></param>
+        /// <param name="ventaEnCurso"></param>
+        /// <param name="formaDePago"></param>
+        /// <param name="cuotas"></param>
+        /// <returns></returns>
         private static bool ConfirmarVenta(Petshop petshop, Cliente cliente, List<Producto> ventaEnCurso, string formaDePago, int cuotas)
         {
             DialogResult respuesta = MessageBox.Show("Confirmar venta?", "Esta seguro?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -181,6 +209,11 @@ namespace Formularios
             return false;
         }
 
+        /// <summary>
+        /// Varia el calculo segun la cantidad de cuotas seleccionadas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbCuotas_SelectedIndexChanged(object sender, EventArgs e)
         {
             double subtotal = Controlador.CalcularSubtotal(ventaEnCurso);
@@ -191,6 +224,11 @@ namespace Formularios
             lblCuota.Text = $"{cuotas} cuota(s) de ${Math.Round(total / cuotas, 2)}";
         }
 
+        /// <summary>
+        /// Muestra el vuelto si se paga en efectivo con un monto mayor
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtBoxPago_TextChanged(object sender, EventArgs e)
         {
             double subtotal = Controlador.CalcularSubtotal(ventaEnCurso);
